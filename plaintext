@@ -1,0 +1,21 @@
+FUNCTION analyser(phrase):
+    SET longueur = 0
+    SET nombreMots = 0
+    SET nombreVoyelles = 0
+    SET voyelles = "aeiouAEIOU"
+
+    FOR each char IN phrase:
+        INCREMENT longueur by 1
+
+        IF char IN voyelles THEN:
+            INCREMENT nombreVoyelles by 1
+
+        IF char = ' ' THEN:
+            INCREMENT nombreMots by 1
+
+    IF longueur > 1 THEN:
+        INCREMENT nombreMots by 1
+
+    PRINT "Longueur de la phrase :" + longueur
+    PRINT "Nombre de mots :" + nombreMots
+    PRINT "Nombre de voyelles :" + nombreVoyelles
